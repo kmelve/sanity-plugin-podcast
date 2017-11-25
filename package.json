@@ -1,0 +1,17 @@
+{
+  "name": "sanity-plugin-podcast",
+  "version": "1.0.0",
+  "description": "Podcast plugin for Sanity",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sanity",
+    "podcast",
+    "schema",
+    "iTunes"
+  ],
+  "author": "Knut Melvær",
+  "license": "MIT"
+}
