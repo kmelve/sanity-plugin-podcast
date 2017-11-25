@@ -1,3 +1,5 @@
+import categories from './categories';
+
 export default {
     name: 'podcast',
     title: 'Podcast',
@@ -18,6 +20,12 @@ export default {
             name: 'description',
             type: 'text',
             description: 'What is this podcast about and why should people listen to it?'
+        },
+        {
+            name: 'coverArt',
+            title: 'Cover art',
+            type: 'image',
+            description: 'The image should be either jpg or png. Preferably 2800 x 2800.'
         },
         {
             name: 'copyright',
@@ -135,6 +143,7 @@ export default {
         },
         {
             name: 'iTunesInfo',
+            title: 'iTunes settings',
             type: 'object',
             description: 'iTunes has extra stuff',
             fields: [
@@ -176,82 +185,30 @@ export default {
                     }
                 },
                 {
-                    name: 'primaryCategory',
-                    title: 'Primary Category',
-                    type: 'string',
-                    description: 'Where should this podcast be organized in iTunes?',
-                    options: {
-                        list: [
-                            { value: 1, title: "Arts" },
-                            { value: 2, title: "Arts &gt; Design" },
-                            { value: 3, title: "Arts &gt; Fashion &amp; Beauty" },
-                            { value: 4, title: "Arts &gt; Food" },
-                            { value: 5, title: "Arts &gt; Literature" },
-                            { value: 6, title: "Arts &gt; Performing Arts" },
-                            { value: 7, title: "Arts &gt; Visual Arts" },
-                            { value: 8, title: "Business" },
-                            { value: 9, title: "Business &gt; Business News" },
-                            { value: 10, title: "Business &gt; Careers" },
-                            { value: 11, title: "Business &gt; Investing" },
-                            { value: 12, title: "Business &gt; Management &amp; Marketing" },
-                            { value: 13, title: "Business &gt; Shopping" },
-                            { value: 14, title: "Comedy" },
-                            { value: 15, title: "Education" },
-                            { value: 16, title: "Education &gt; Education" },
-                            { value: 17, title: "Education &gt; Education Technology" },
-                            { value: 18, title: "Education &gt; Higher Education" },
-                            { value: 19, title: "Education &gt; K-12" },
-                            { value: 20, title: "Education &gt; Language Courses" },
-                            { value: 21, title: "Education &gt; Training" },
-                            { value: 22, title: "Games &amp; Hobbies" },
-                            { value: 23, title: "Games &amp; Hobbies &gt; Automotive" },
-                            { value: 24, title: "Games &amp; Hobbies &gt; Aviation" },
-                            { value: 25, title: "Games &amp; Hobbies &gt; Hobbies" },
-                            { value: 26, title: "Games &amp; Hobbies &gt; Other Games" },
-                            { value: 27, title: "Games &amp; Hobbies &gt; Video Games" },
-                            { value: 28, title: "Government &amp; Organizations" },
-                            { value: 29, title: "Government &amp; Organizations &gt; Local" },
-                            { value: 30, title: "Government &amp; Organizations &gt; National" },
-                            { value: 31, title: "Government &amp; Organizations &gt; Non-Profit" },
-                            { value: 32, title: "Government &amp; Organizations &gt; Regional" },
-                            { value: 33, title: "Health" },
-                            { value: 34, title: "Health &gt; Alternative Health" },
-                            { value: 35, title: "Health &gt; Fitness &amp; Nutrition" },
-                            { value: 36, title: "Health &gt; Self-Help" },
-                            { value: 37, title: "Health &gt; Sexuality" },
-                            { value: 38, title: "Kids &amp; Family" },
-                            { value: 39, title: "Music" },
-                            { value: 40, title: "News &amp; Politics" },
-                            { value: 41, title: "Religion &amp; Spirituality" },
-                            { value: 42, title: "Religion &amp; Spirituality &gt; Buddhism" },
-                            { value: 43, title: "Religion &amp; Spirituality &gt; Christianity" },
-                            { value: 44, title: "Religion &amp; Spirituality &gt; Hinduism" },
-                            { value: 45, title: "Religion &amp; Spirituality &gt; Islam" },
-                            { value: 46, title: "Religion &amp; Spirituality &gt; Judaism" },
-                            { value: 47, title: "Religion &amp; Spirituality &gt; Other" },
-                            { value: 48, title: "Religion &amp; Spirituality &gt; Spirituality" },
-                            { value: 49, title: "Science &amp; Medicine" },
-                            { value: 50, title: "Science &amp; Medicine &gt; Medicine" },
-                            { value: 51, title: "Science &amp; Medicine &gt; Natural Sciences" },
-                            { value: 52, title: "Science &amp; Medicine &gt; Social Sciences" },
-                            { value: 53, title: "Society &amp; Culture" },
-                            { value: 54, title: "Society &amp; Culture &gt; History" },
-                            { value: 55, title: "Society &amp; Culture &gt; Personal Journals" },
-                            { value: 56, title: "Society &amp; Culture &gt; Philosophy" },
-                            { value: 57, title: "Society &amp; Culture &gt; Places &amp; Travel" },
-                            { value: 58, title: "Sports &amp; Recreation" },
-                            { value: 59, title: "Sports &amp; Recreation &gt; Amateur" },
-                            { value: 60, title: "Sports &amp; Recreation &gt; College &amp; High School" },
-                            { value: 61, title: "Sports &amp; Recreation &gt; Outdoor" },
-                            { value: 62, title: "Sports &amp; Recreation &gt; Professional" },
-                            { value: 63, title: "Technology" },
-                            { value: 64, title: "Technology &gt; Gadgets" },
-                            { value: 65, title: "Technology &gt; Tech News" },
-                            { value: 66, title: "Technology &gt; Podcasting" },
-                            { value: 67, title: "Technology &gt; Software How-To" },
-                            { value: 68, title: "TV &amp; Film" },
-                        ]
-                    }
+                    name: 'categories',
+                    title: 'Categories',
+                    type: 'object',
+                    description: 'Each podcast can belong to 3 separate categories, and will be ranked separately in each.',
+                    fieldsets: [
+                        {
+                            title: 'Optional categories',
+                            name: 'categories',
+                            options: {
+                                collapsable: true,
+                            },
+                        },
+                    ],
+                    fields: ['first', 'secondary', 'tertiary'].map((category, index) => (
+                        {
+                            name: `${category}Category`,
+                            type: 'string',
+                            description: 'Where should this podcast be organized in iTunes?',
+                            options: {
+                                list: categories
+                            },
+                            fieldset: index ? 'categories' : null,
+                        }
+                    ))
                 }
             ]
         }
