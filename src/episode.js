@@ -14,11 +14,13 @@ export default {
         {
             name: 'file',
             title: 'Podcast media file',
+            description: 'Most podcatchers support .mp3, but other audio-formats may work as well',
             type: 'file',
         },
         {
             name: 'title',
             title: 'Title',
+            description: 'Remember that long titles can be truncated in podcast apps',
             type: 'string',
         },
         {
@@ -29,12 +31,25 @@ export default {
         {
             name: 'summary',
             title: 'Summary',
+            description: 'iTunes ',
             type: 'text'
         },
         {
             name: 'description',
             title: 'Description',
             type: 'text',
+        },
+        {
+            name: 'slug',
+            title: 'Episode slug',
+            description: 'When you need to refer to your podcast episode in a url',
+            options: {
+                source: 'title',
+                slugify: input => input
+                                     .toLowerCase()
+                                     .replace(/\s+/g, '-')
+                                     .slice(0, 200)
+              }
         },
         {
             name: 'tags',

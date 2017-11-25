@@ -17,6 +17,18 @@ export default {
             description: 'That catchy tagline'
         },
         {
+            name: 'slug',
+            title: 'Podcast slug',
+            description: 'When you need to refer to your podcast in a url',
+            options: {
+                source: 'title',
+                slugify: input => input
+                                     .toLowerCase()
+                                     .replace(/\s+/g, '-')
+                                     .slice(0, 200)
+              }
+        },
+        {
             name: 'description',
             type: 'text',
             description: 'What is this podcast about and why should people listen to it?'
