@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-podcast",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Podcast plugin for Sanity",
   "main": "lib/index.js",
   "scripts": {
@@ -12,6 +12,10 @@
     "schema",
     "iTunes"
   ],
-  "author": "Knut Melvær",
+  "author": {
+    "name": "Knut Melvær",
+    "email": "knut.melvaer@gmail.com",
+    "url": "https://knutmelvaer.no"
+  },
   "license": "MIT"
 }
