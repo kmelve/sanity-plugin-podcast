@@ -6,8 +6,12 @@
 
   "parts": [
     {
-      "name": "part:podcast/schema",
-      "path": "index.js"
+      "implements": "part:@sanity/base/schema-type",
+      "path": "episode.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "podcast.js"
     }
   ]
 }

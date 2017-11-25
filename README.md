@@ -11,11 +11,9 @@ sanity install podcast
 
 ## Usage
 
-Import the type into your schema:
+The types will be now available in your schemas.
 
 ```js
-import {podcast, episode}  from 'part:podcast/schema';
-
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
