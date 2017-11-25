@@ -19,6 +19,7 @@ export default {
         {
             name: 'slug',
             title: 'Podcast slug',
+            type: 'slug',
             description: 'When you need to refer to your podcast in a url',
             options: {
                 source: 'title',
