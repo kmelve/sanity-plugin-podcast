@@ -5,6 +5,7 @@ export default {
     fields: [
         {
             name: 'podcast',
+            description: 'Choose podcast(s) to publish this episode in',
             type: 'array',
             of: [
                 { type: 'reference', weak: true, to: [ { type: 'podcast' }] }

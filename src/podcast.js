@@ -25,7 +25,7 @@ export default {
             name: 'coverArt',
             title: 'Cover art',
             type: 'image',
-            description: 'The image should be either jpg or png. Preferably 2800 x 2800.'
+            description: 'The image should be either jpg or png. Preferably 3000 x 3000, minimum 1400 x 1400 pixels.'
         },
         {
             name: 'copyright',
