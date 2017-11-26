@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Podcast plugin for Sanity",
   "main": "lib/index.js",
+  "scripts": {
+    "prepublishOnly": "babel -d lib/ src/"
+  },
   "keywords": [
     "sanity",
     "podcast",
@@ -14,5 +17,9 @@
     "email": "knut.melvaer@gmail.com",
     "url": "https://knutmelvaer.no"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }
