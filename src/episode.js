@@ -4,6 +4,47 @@ export default {
     type: 'document',
     fields: [
         {
+            name: 'schedule',
+            type: 'object',
+            title: 'Publish schedule',
+            fields: [
+                {
+                    name: 'publish',
+                    type: 'richDate',
+                    title: 'Date of publication',
+                    description: 'When should this episode be available?',
+                    options: {
+                        inputUtc: false,
+                        dateFormat: 'YYYY-MM-DD',
+                        timeFormat: 'HH:mm',
+                        inputDate: true,
+                        inputTime: true,
+                        timeStep: 15,
+                        calendarTodayLabel: 'Today',
+                        placeholderDate: '2017-04-18',
+                        placeholderTime: '11:29'
+                      }
+                },
+                {
+                    name: 'unpublish',
+                    type: 'richDate',
+                    title: 'When should this episode be unaccessible?',
+                    description: 'In case you want to unpublish an episode on a said date.',
+                    options: {
+                        inputUtc: false,
+                        dateFormat: 'YYYY-MM-DD',
+                        timeFormat: 'HH:mm',
+                        inputDate: true,
+                        inputTime: true,
+                        timeStep: 15,
+                        calendarTodayLabel: 'Today',
+                        placeholderDate: '2017-04-18',
+                        placeholderTime: '11:29'
+                      }
+                }
+            ]
+        },
+        {
             name: 'podcast',
             description: 'Choose podcast(s) to publish this episode in',
             type: 'array',
@@ -63,7 +104,7 @@ export default {
             ],
         },
         {
-            name: 'itunesSettings',
+            name: 'itunes',
             title: 'iTunes Settings',
             type: 'object',
             fields: [
