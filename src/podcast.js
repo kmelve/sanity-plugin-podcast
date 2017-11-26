@@ -155,13 +155,19 @@ export default {
             description: 'Do you need to warn parents about the content in this podcast? (You can set this for individual episodes to)'
         },
         {
-            name: 'iTunesInfo',
+            name: 'itunes',
             title: 'iTunes settings',
             type: 'object',
             description: 'iTunes has extra stuff',
             fields: [
                 {
                     name: 'author',
+                    type: 'string',
+                    title: 'Author',
+                    description: 'Podcast author, typically the host(s)'
+                },
+                {
+                    name: 'owner',
                     type: 'object',
                     description: 'The name and email of the person or organization that iTunes should list in their different views',
                     fields: [
@@ -176,7 +182,7 @@ export default {
                     ]
                 },
                 {
-                    name: 'itunesUrl',
+                    name: 'url',
                     type: 'url',
                     description: 'Helpful for when you want to show this podcast in other contexts than iTunes'
                 },
