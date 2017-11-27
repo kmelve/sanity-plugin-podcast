@@ -59,6 +59,12 @@ export default {
             type: 'file',
         },
         {
+            name: 'duration',
+            title: 'Duration',
+            description: 'HH:MM:SS',
+            type: 'string'
+        },
+        {
             name: 'title',
             title: 'Title',
             description: 'Remember that long titles can be truncated in podcast apps',
