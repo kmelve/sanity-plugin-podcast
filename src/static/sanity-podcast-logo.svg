@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="136px" height="136px" viewBox="0 0 136 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="29" y="0" width="83" height="95"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sanity-podcast-feed" transform="translate(12.000000, 2.000000)">
+            <path d="M5.9,68.5 C5.9,78 11.8,83.7 23.6,86.7 L36.1,89.6 C47.3,92.2 54.1,98.6 54.1,109 C54.2,113.5 52.7,117.9 50,121.5 C50,111.1 44.6,105.5 31.7,102.1 L19.4,99.3 C9.5,97.1 1.9,91.8 1.9,80.5 C1.9,76.2 3.3,71.9 5.9,68.5" id="Shape" fill="#F04939" fill-rule="nonzero"></path>
+            <path d="M42.3,106.4 C47.6,109.8 50,114.6 50,121.5 C45.5,127.2 37.8,130.3 28.7,130.3 C13.4,130.3 2.5,122.7 0.2,109.6 L14.9,109.6 C16.8,115.6 21.8,118.4 28.6,118.4 C36.7,118.5 42.2,114.1 42.3,106.4 M13.6,82.6 C8.6,79.6 5.7,74.2 5.9,68.4 C10.2,62.8 17.6,59.4 26.6,59.4 C42.3,59.4 51.3,67.7 53.6,79.3 L39.4,79.3 C37.8,74.7 33.9,71.1 26.8,71.1 C19.1,71.2 13.9,75.6 13.6,82.6" id="Shape" fill="#F37368" fill-rule="nonzero"></path>
+            <g id="logo_red" transform="translate(1.000000, 59.000000)"></g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <circle id="Oval" stroke="#F37368" stroke-width="14" mask="url(#mask-2)" cx="23.5" cy="89.5" r="52.5"></circle>
+            <circle id="Oval" stroke="#F04939" stroke-width="14" mask="url(#mask-2)" cx="23.5" cy="89.5" r="80.5"></circle>
+        </g>
+    </g>
+</svg>
