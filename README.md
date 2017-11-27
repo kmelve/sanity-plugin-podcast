@@ -19,6 +19,8 @@ In these schemas you will have most of the fields you'll need to publish a podca
 
 You can validate your podcast feed at [`castfeedvalidator.com/?url=https://www.sanitypodcastfeed.com/<projectid>/<dataset>/<podcastslug>/rss`](castfeedvalidator.com).
 
+You probably want to add your podcast to the iTunes Podcast directory. You can read about the various steps at [Apple’s Podcast Connect](https://itunespartner.apple.com/podcasts/).
+
 ## License
 
 MIT-licensed. See LICENSE.
