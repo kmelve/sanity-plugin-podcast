@@ -10,7 +10,7 @@ export default {
             fields: [
                 {
                     name: 'publish',
-                    type: 'richDate',
+                    type: 'datetime',
                     title: 'Date of publication',
                     description: 'When should this episode be available?',
                     options: {
@@ -55,6 +55,7 @@ export default {
         {
             name: 'file',
             title: 'Podcast media file',
+            required: true,
             description: 'Most podcatchers support .mp3, but other audio-formats may work as well',
             type: 'file',
         },
@@ -67,6 +68,7 @@ export default {
         {
             name: 'title',
             title: 'Title',
+            required: true,
             description: 'Remember that long titles can be truncated in podcast apps',
             type: 'string',
         },
