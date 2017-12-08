@@ -4,7 +4,7 @@
 
 Podcast plugin for [Sanity](https://sanity.io/) that creates schemas for podcasts and episodes with necessary iTunes data. You can make as many podcasts with as many episodes as you want. You can also cross publish episodes to multiple podcasts (if that ever makes sense). Sanity also takes care of the file hosting with CDNs that makes your episodes download fast wherever your listeners are.
 
-Note: [You still need a service to translate the data output to a valid RSS-feed](#get-the-podcast-on-the-ether). 
+Note: [You still need a service to translate the data output to a valid RSS-feed](#get-the-podcast-on-the-ether-headphones). 
 
 ## Installation :package:
 
@@ -30,8 +30,7 @@ You probably want to add your podcast to the iTunes Podcast directory. You can r
 - [ ] Mp3-player in Content Studio
 - [ ] Automatic extraction of media file information (such as duration etc.)
 - [ ] Filters and sound quality improvements
-- [ ] Chapter editing
-- [ ] 
+- [ ] Chapter editing
 
 ## License
 
