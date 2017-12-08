@@ -19,7 +19,7 @@ This plugin adds two document shchemas to your Sanity dataset: *Podcast* and *Ep
 
 ## Get the podcast on the ether! :headphones:
 
-In these schemas you will have most of the fields you'll need to publish a podcast. In order to actually get a podcast on the ether, you will need a service to generate and host a RSS-feed. If you don't want to make your own, you can either clone/fork the node-based [Sanity Podcast Server](https://github.com/kmelve/sanity-podcast-server) or just simply the free service by adding `https://www.sanitypodcastfeed.com` to your [CORS-settings](https://www.sanity.io/docs/front-ends/cors) and accessing your feed at `https://www.sanitypodcastfeed.com/<projectid>/<dataset>/<podcastslug>/rss`.
+In these schemas you will have most of the fields you'll need to publish a podcast. In order to actually get a podcast on the ether, you will need a service to generate and host a RSS-feed. If you don't want to make your own, you can either clone/fork the node-based [Sanity Podcast Server](https://github.com/kmelve/sanity-podcast-server) or just simply use the free service by adding `https://www.sanitypodcastfeed.com` to your [CORS-settings](https://www.sanity.io/docs/front-ends/cors) and accessing your feed at `https://www.sanitypodcastfeed.com/<projectid>/<dataset>/<podcastslug>/rss`.
 
 You can validate your podcast feed at [`castfeedvalidator.com/?url=https://www.sanitypodcastfeed.com/<projectid>/<dataset>/<podcastslug>/rss`](castfeedvalidator.com).
 
