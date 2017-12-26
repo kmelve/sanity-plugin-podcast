@@ -89,6 +89,29 @@ export default {
       type: 'text'
     },
     {
+      name: 'linkList',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'title',
+              type: 'string'
+            },
+            {
+              name: 'URL',
+              type: 'url'
+            },
+            {
+              name: 'excerpt',
+              type: 'text'
+            }
+          ]
+        }
+      ]
+    },
+    {
       name: 'slug',
       title: 'Episode slug',
       type: 'slug',
