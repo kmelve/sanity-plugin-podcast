@@ -1,3 +1,5 @@
+import { FaPodcast } from 'react-icons/fa'
+
 import categories from './categories';
 import languages from './languages';
 
@@ -5,6 +7,7 @@ export default {
   name: 'podcast',
   title: 'Podcast',
   description: 'Create and configure a podcast',
+  icon: FaPodcast,
   type: 'document',
   fields: [
     {
@@ -146,5 +149,13 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'subtitle',
+      description: 'description',
+      media: 'coverArt'
+    }
+  }
 };
