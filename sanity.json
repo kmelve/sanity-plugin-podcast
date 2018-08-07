@@ -12,6 +12,14 @@
     {
       "implements": "part:@sanity/base/schema-type",
       "path": "podcast.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "sponsor.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "host.js"
     }
   ]
 }
