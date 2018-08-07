@@ -52,7 +52,7 @@ class Player extends React.Component {
     }
   }
 
-  timeUpdate = e => {
+  timeUpdate(e) {
     console.log('Updating Time');
     // Check if the user already had a curent time
     if (this.state.timeWasLoaded) {
@@ -70,28 +70,28 @@ class Player extends React.Component {
     }
   };
 
-  togglePlay = () => {
+  togglePlay () {
     const method = this.state.playing ? 'pause' : 'play';
     this.audio[method]();
   };
 
-  scrub = e => {
+  scrub (e) {
     const scrubTime =
       (e.nativeEvent.offsetX / this.progress.offsetWidth) * this.audio.duration;
     this.audio.currentTime = scrubTime;
   };
 
-  playPause = () => {
+  playPause() {
     this.setState({ playing: !this.audio.paused });
     const method = this.audio.paused ? 'add' : 'remove';
     document.querySelector('.bars').classList[method]('bars--paused'); // 💩
   };
 
-  volume = e => {
+  volume  (e) {
     this.audio.volume = e.currentTarget.value;
   };
 
-  speed = () => {
+  speed () {
     let playbackRate = this.state.playbackRate + 0.25;
     if (playbackRate > 2.5) {
       playbackRate = 0.75;
@@ -103,7 +103,9 @@ class Player extends React.Component {
     const {level, type, value, onChange, document} = this.props
     const { title, file } = document
     const {valid} = this.state
-    if (!file || !file.asset) return (<div></div>)
+    if (!file || !file.asset) {
+      return ''
+    }
     const { asset: { _ref = '' } = {} } = file
     const fileUrl = _ref.split('-').length ? `https://cdn.sanity.io/files/j4iakyct/syntaxfm/${_ref.split('-')[1]}.${_ref.split('-')[2]}` : ''
     const { playing, progressTime, currentTime, duration } = this.state;

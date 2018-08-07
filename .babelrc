@@ -1,9 +1,1 @@
-{
-  "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["ie >= 11"]
-      }
-    }]
-  ]
-}
+{ "presets": ["react"] }
