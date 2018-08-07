@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-podcast",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Podcast plugin for Sanity",
   "main": "lib/index.js",
   "scripts": {
