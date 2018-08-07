@@ -1,0 +1,13 @@
+{
+    "env": {
+      "browser": true,
+      "node": false
+    },
+    "extends": [
+      "sanity",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018
+    }
+  }
