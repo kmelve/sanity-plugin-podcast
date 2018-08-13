@@ -1,4 +1,3 @@
-import SoundPlayerInput from './components/SoundPlayerInput/SoundPlayerInput'
 export default {
   name: 'episode',
   title: 'Episode',
@@ -66,14 +65,6 @@ export default {
       description:
         'Most podcatchers support .mp3, but other audio-formats may work as well',
       type: 'file'
-    },
-    {
-      name: 'previewFile',
-      title: 'Podcast media file',
-      inputComponent: SoundPlayerInput,
-      description:
-        'Most podcatchers support .mp3, but other audio-formats may work as well',
-      type: 'string',
     },
     {
       name: 'fileUrl',
