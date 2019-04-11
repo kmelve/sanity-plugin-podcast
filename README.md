@@ -25,13 +25,6 @@ You can validate your podcast feed at [`castfeedvalidator.com/?url=https://www.s
 
 You probably want to add your podcast to the iTunes Podcast directory. You can read about the various steps at [Apple’s Podcast Connect](https://itunespartner.apple.com/podcasts/).
 
-## Roadmap :ballot_box_with_check:
-
-- [ ] Mp3-player in Content Studio
-- [ ] Automatic extraction of media file information (such as duration etc.)
-- [ ] Filters and sound quality improvements
-- [ ] Chapter editing
-
 ## License
 
 MIT-licensed. See LICENSE.
