@@ -1,11 +1,10 @@
 {
   "name": "sanity-plugin-podcast",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Podcast plugin for Sanity",
   "main": "lib/index.js",
   "scripts": {
-    "copycss": "cpx \"src/**/*.css\" lib",
-    "prepublishOnly": "babel -d lib/ src/ && npm run copycss",
+    "prepublishOnly": "babel -d lib/ src/",
     "lint": "eslint ./src"
   },
   "keywords": [
@@ -22,16 +21,16 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "copyfiles": "^2.0.0",
-    "cpx": "^1.5.0",
-    "eslint": "^5.3.0",
-    "eslint-config-prettier": "^4.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
     "eslint-config-sanity": "^0.140.0",
-    "eslint-plugin-import": "^2.13.0"
+    "eslint-plugin-import": "^2.17.2",
+    "react-hot-loader": "^4.8.4"
   },
   "dependencies": {
-    "react-icons": "^3.0.5"
+    "react": "^16.8.6",
+    "react-icons": "^3.6.1"
   }
 }
