@@ -65,6 +65,7 @@ export default {
       title: 'Description',
       description: `An episode description is a string containing one or more sentences describing your episode to potential listeners. You can specify up to 4000 characters.`,
       type: 'text',
+      validation: Rule => Rule.max(4000)
     },
     {
       name: 'content',
