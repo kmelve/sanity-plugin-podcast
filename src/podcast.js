@@ -1,6 +1,6 @@
 import { FaPodcast } from 'react-icons/fa'
 
-import categories from './categories';
+
 import languages from './languages';
 
 export default {
@@ -73,81 +73,8 @@ export default {
     {
       name: 'itunes',
       title: 'iTunes settings',
-      type: 'object',
+      type: 'itunes',
       description: 'iTunes has extra stuff',
-      fields: [
-        {
-          name: 'author',
-          type: 'string',
-          title: 'Author',
-          description: 'Podcast author, typically the host(s)'
-        },
-        {
-          name: 'owner',
-          type: 'object',
-          description:
-            'The name and email of the person or organization that iTunes should list in their different views',
-          fields: [
-            {
-              name: 'email',
-              type: 'email'
-            },
-            {
-              name: 'name',
-              type: 'string'
-            }
-          ]
-        },
-        {
-          name: 'url',
-          type: 'url',
-          description:
-            'Helpful for when you want to show this podcast in other contexts than iTunes'
-        },
-        {
-          name: 'type',
-          type: 'string',
-          description:
-            'Is this a ongoing (episodic) podcast, or is it structured in seasons?',
-          options: {
-            list: [
-              {
-                value: 'episodic',
-                title: 'Episodic'
-              },
-              {
-                value: 'serial',
-                title: 'Serial'
-              }
-            ]
-          }
-        },
-        {
-          name: 'categories',
-          title: 'Categories',
-          type: 'object',
-          description:
-            'Each podcast can belong to 3 separate categories, and will be ranked separately in each.',
-          fieldsets: [
-            {
-              title: 'Optional categories',
-              name: 'categories',
-              options: {
-                collapsable: true
-              }
-            }
-          ],
-          fields: ['first', 'secondary', 'tertiary'].map((category, index) => ({
-            name: `${category}Category`,
-            type: 'string',
-            description: 'Where should this podcast be organized in iTunes?',
-            options: {
-              list: categories
-            },
-            fieldset: index ? 'categories' : null
-          }))
-        }
-      ]
     }
   ],
   preview: {

@@ -1,7 +1,10 @@
+import { MdAttachMoney } from 'react-icons/md'
+
 export default {
   name: 'sponsor',
   type: 'document',
   title: 'Sponsor',
+  icon: MdAttachMoney,
   fields: [
       {
         name: 'name',

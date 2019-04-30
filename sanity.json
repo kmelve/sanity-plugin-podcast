@@ -4,8 +4,7 @@
     "compiled": "./lib"
   },
 
-  "parts": [
-    {
+  "parts": [{
       "implements": "part:@sanity/base/schema-type",
       "path": "episode.js"
     },
@@ -20,6 +19,38 @@
     {
       "implements": "part:@sanity/base/schema-type",
       "path": "host.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "social.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "schedule.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "itunes.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "owner.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "categories.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "linkListItem.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "itunesEpisodeSettings.js"
+    },
+    {
+      "implements": "part:@sanity/base/schema-type",
+      "path": "sponsorRead.js"
     }
   ]
 }

@@ -1,7 +1,10 @@
+import { MdPlayArrow } from 'react-icons/md'
+
 export default {
   name: 'episode',
   title: 'Episode',
   type: 'document',
+  icon: MdPlayArrow,
   fields: [
     {
       name: 'title',
@@ -18,50 +21,12 @@ export default {
     },
     {
       name: 'schedule',
-      type: 'object',
+      type: 'schedule',
       title: 'Publish schedule',
-      fields: [
-        {
-          name: 'publish',
-          type: 'datetime',
-          title: 'Date of publication',
-          description: 'When should this episode be available?',
-          options: {
-            inputUtc: false,
-            dateFormat: 'YYYY-MM-DD',
-            timeFormat: 'HH:mm',
-            inputDate: true,
-            inputTime: true,
-            timeStep: 15,
-            calendarTodayLabel: 'Today',
-            placeholderDate: '2017-04-18',
-            placeholderTime: '11:29'
-          }
-        },
-        {
-          name: 'unpublish',
-          type: 'datetime',
-          title: 'When should this episode be unaccessible?',
-          description:
-            'In case you want to unpublish an episode on a said date.',
-          options: {
-            inputUtc: false,
-            dateFormat: 'YYYY-MM-DD',
-            timeFormat: 'HH:mm',
-            inputDate: true,
-            inputTime: true,
-            timeStep: 15,
-            calendarTodayLabel: 'Today',
-            placeholderDate: '2017-04-18',
-            placeholderTime: '11:29'
-          }
-        }
-      ]
     },
     {
       name: 'file',
       title: 'Podcast media file',
-      readOnly: true,
       description:
         'Most podcatchers support .mp3, but other audio-formats may work as well',
       type: 'file'
@@ -117,25 +82,7 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'object',
-          fields: [
-            {
-              name: 'title',
-              type: 'string'
-            },
-            {
-              name: 'URL',
-              type: 'url'
-            },
-            {
-              name: 'excerpt',
-              type: 'text'
-            },
-            {
-              name: 'timestamp',
-              type: 'string',
-            }
-          ]
+          type: 'linkListItem'
         }
       ]
     },
@@ -169,26 +116,7 @@ export default {
     {
       name: 'itunes',
       title: 'iTunes Settings',
-      type: 'object',
-      fields: [
-        {
-          name: 'type',
-          title: 'Episode type',
-          type: 'string',
-          options: {
-            list: [
-              { value: 'full', title: 'Full' },
-              { value: 'trailer', title: 'Trailer' },
-              { value: 'bonus', title: 'Bonus' }
-            ]
-          }
-        },
-        {
-          name: 'season',
-          title: 'Season',
-          type: 'number'
-        }
-      ]
+      type: 'itunesEpisodeSettings',
     },
     {
       name: 'coverArt',
@@ -200,27 +128,7 @@ export default {
       type: 'array',
       title: 'Sponsors',
       of: [
-        {
-          type: 'object',
-          title: 'Sponsor read',
-          fields: [
-            {
-              name: 'sponsor',
-              type: 'reference',
-              to: [
-                {
-                  type: 'sponsor'
-                }
-              ]
-            },
-            {
-              name: 'copy',
-              type: 'array',
-              title: 'copy',
-              of: [{ type: 'block'}]
-            },
-          ]
-        },
+        { type: 'sponsorRead' }
       ]
     },
   ],

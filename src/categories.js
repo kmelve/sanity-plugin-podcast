@@ -1,5 +1,5 @@
 // iTunes Categories
-export default [
+const categories = [
 { value: "Arts", title: "Arts" },
 { value: "Arts > Design", title: "Arts > Design" },
 { value: "Arts > Fashion & Beauty", title: "Arts > Fashion & Beauty" },
@@ -69,3 +69,29 @@ export default [
 { value: "Technology > Software How-To", title: "Technology > Software How-To" },
 { value: "TV & Film", title: "TV & Film" },
 ];
+
+export default {
+  name: 'categories',
+  title: 'Categories',
+  type: 'object',
+  description:
+    'Each podcast can belong to 3 separate categories, and will be ranked separately in each.',
+  fieldsets: [
+    {
+      title: 'Optional categories',
+      name: 'categories',
+      options: {
+        collapsable: true
+      }
+    }
+  ],
+  fields: ['first', 'secondary', 'tertiary'].map((category, index) => ({
+    name: `${category}Category`,
+    type: 'string',
+    description: 'Where should this podcast be organized in iTunes?',
+    options: {
+      list: categories
+    },
+    fieldset: index ? 'categories' : null
+  }))
+}

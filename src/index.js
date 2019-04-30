@@ -1,4 +1,12 @@
 export {default as episode} from './episode';
 export {default as podcast} from './podcast';
 export {default as sponsor} from './sponsor';
-export {default as host} from './host';
+export { default as host } from './host';
+export { default as social } from './social';
+export { default as schedule } from './schedule';
+export { default as itunes } from './itunes';
+export { default as owner } from './owner';
+export { default as categories } from './categories';
+export { default as linkListItem } from './linkListItem';
+export { default as itunesEpisodeSettings } from './itunesEpisodeSettings';
+export {default as sponsorRead} from './sponsorRead';
