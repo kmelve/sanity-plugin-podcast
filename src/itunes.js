@@ -1,5 +1,3 @@
-import categories from './categories';
-
 export default {
   name: 'itunes',
   title: 'iTunes settings',
