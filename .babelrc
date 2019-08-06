@@ -1,1 +1,14 @@
-{ "presets": ["react"] }
+{
+  "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "edge": "14"
+        },
+        "modules": "commonjs"
+      }
+    ]
+  ]
+}

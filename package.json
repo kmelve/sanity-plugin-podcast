@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "prepublishOnly": "babel -d lib/ src/",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "test": "npm run lint"
   },
   "keywords": [
     "sanity",
@@ -20,17 +21,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-config-sanity": "^0.140.0",
-    "eslint-plugin-import": "^2.17.2",
-    "react-hot-loader": "^4.8.4"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-sanity": "^0.141.5",
+    "eslint-plugin-import": "^2.18.2",
+    "react-hot-loader": "^4.12.10"
   },
   "dependencies": {
     "react": "^16.8.6",
-    "react-icons": "^3.6.1"
+    "react-icons": "^3.7.0"
   }
 }
