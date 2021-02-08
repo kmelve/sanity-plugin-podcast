@@ -27,7 +27,7 @@
     "@babel/preset-react": "^7.0.0",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-config-sanity": "^0.141.5",
+    "eslint-config-sanity": "^5.0.0",
     "eslint-plugin-import": "^2.18.2",
     "react-hot-loader": "^4.12.10"
   },
